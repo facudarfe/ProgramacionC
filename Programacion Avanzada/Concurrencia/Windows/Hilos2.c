@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+#include <time.h>
 #define MAX_THREADS 20
 #define TAM_MAX 100000
 
@@ -18,6 +19,7 @@ int main(int argc, char *argv[]) {
 	TdatosLista **parms;
 	HANDLE manejadoresHilos[MAX_THREADS];
 	DWORD hilos[MAX_THREADS];
+	srand(time(NULL));
 	
 	tamLista = 100000;
 	cargarLista(lista, tamLista);
